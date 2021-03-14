@@ -9,7 +9,7 @@ name: СI-Py
 on:
   push:
     branches: 
-    - master 
+    - main
       
 jobs:
   CI_part:
