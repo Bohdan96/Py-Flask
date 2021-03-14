@@ -1,4 +1,4 @@
-name: Сi-Py
+name: СI-Py
 env:
   EB_PACKAGE_S3_BUCKET_NAME  : "flask-app-packeges"
   EB_APPLICATION_NAME        : "Py-Flask"
