@@ -1,0 +1,22 @@
+name: СI-Py
+#env:
+ # EB_PACKAGE_S3_BUCKET_NAME  : "flask-app-packeges"
+ # EB_APPLICATION_NAME        : "Py-Flask"
+ # EB_ENVIRONMENT_NAME        : "Py-Flask"
+ # DEPLOY_PACKAGE_NAME        : "flask_app_${{ github.sha }}.zip"
+ # AWS_REGION_NAME            : "eu-central-1"
+  
+on:
+  push:
+    branches: [main]
+      
+jobs:
+  CI_part:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Git clone repo
+      uses: actions/checkout@v1
+
+    - name: Create ZIP deployment package
+      run : zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
