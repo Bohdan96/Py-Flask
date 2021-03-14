@@ -8,11 +8,12 @@ name: СI-Py
   
 on:
   push:
-    branches: [main]
+    branches: 
+    - master 
       
 jobs:
   CI_part:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     
     steps:
     - name: Git clone repo
