@@ -3,7 +3,7 @@ env:
   EB_PACKAGE_S3_BUSKEET_NAME: "flask-app-packeges"
   EB_APPLICATION_NAME: "Py-Flask"
   EB_ENVIRONMENT_NAME: "Py-Flask"
-  DEPLOY_PACKAGES_NAME: "flask_app${{ github.sha }}.zip"
+  DEPLOY_PACKAGES_NAME: "flask_app$_{{ github.sha }}.zip"
   AWS_REGION_NAME: "eu-central-1"
   
 on:
