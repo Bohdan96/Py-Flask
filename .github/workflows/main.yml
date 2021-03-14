@@ -1,10 +1,10 @@
 name: Py-Flask
 env:
-  EB_PACKAGE_S3_BUSKEET_NAME: "flask-app-packeges"
-  EB_APPLICATION_NAME: "Py-Flask"
-  EB_ENVIRONMENT_NAME: "Py-Flask"
-  DEPLOY_PACKAGES_NAME: "flask_app$_{{ github.sha }}.zip"
-  AWS_REGION_NAME: "eu-central-1"
+  EB_PACKAGE_S3_BUCKET_NAME  : "flask-app-packeges"
+  EB_APPLICATION_NAME        : "Py-Flask"
+  EB_ENVIRONMENT_NAME        : "Py-Flask"
+  DEPLOY_PACKAGE_NAME        : "flask_app_${{ github.sha }}.zip"
+  AWS_REGION_NAME            : "eu-central-1"
   
 on:
   push:
@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Git clone our repo
+    - name: Git clone repo
       uses: actions/checkout@v1
 
-    - name: Create ZIP deployment packeges
-      run: zip -r ${{ env.DEPLOY_PACKAGES_NAME }} ./ -x *.git*
+    - name: Create ZIP deployment package
+      run : zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
