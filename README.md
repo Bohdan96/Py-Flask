@@ -1,4 +1,4 @@
 Status of Last Deployment:<br>
-<img src="https://github.com/Bohdan96/Py-Flask/workflows/CI-Py/badge.svg?branch=main"></br>
+[![СI-Py](https://github.com/Bohdan96/Py-Flask/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/Bohdan96/Py-Flask/actions/workflows/main.yml)
 
 Copyleft by Bohdan Kanarskyi
